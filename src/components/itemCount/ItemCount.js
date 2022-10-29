@@ -5,12 +5,13 @@ const ItemCount = ({stock, initial, onAdd})=>{
 
 
     return (
-        <div className="counter">
+        <div >
             <h1>{counter}</h1>
-            <div>
+            <div className="counter">
                 <button className="btn" onClick={()=>counter > 0 && setCounter(counter-1)}>-</button>
                 <button className="btn" onClick={()=>counter < stock && setCounter(counter+1)}>+</button>
             </div>
+                <button onClick={onAdd(counter)} className="btn">Agregar al carrito</button>
         </div>
     )
 }
