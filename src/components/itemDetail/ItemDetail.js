@@ -22,7 +22,7 @@ const ItemDetail = (product) => {
         setItems(quantity)
         const totalItems = {
             ...product.product,
-            itemQuantity: items
+            itemQuantity: quantity
         }
         addItem(totalItems);
     }
